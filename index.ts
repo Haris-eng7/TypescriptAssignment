@@ -193,3 +193,223 @@ console.log(locations.reverse());
 //Question 19
 
 console.log(`I am now inviting ${guests.length} people on dinner tomorrow`);
+
+//Question 20
+
+const rivers_arr = ["Ravi", "Jhelum", "Chenab", "Indus", "Sindh"];
+
+//Question 21
+const details = {
+  rivers: ["Ravi", "Jhelum", "Chenab", "Indus", "Sindh"],
+  mountains: ["K2", "Nanga Parbat", "Mount Everest", "Broad Peak"],
+  countries: ["Pakistan", "England", "Canada", "America", "Spain"],
+  languages: ["Urdu", "English", "French", "Dutch", "German"],
+  cities: ["Islamabad", "New York", "Calgary", "London", "Barcelona"],
+};
+
+console.log(details.rivers);
+//Question 22 (Fixed in Question 3)
+
+//Question 23
+
+let car = "subaru";
+console.log("Is car == 'subaru'? I predict True.");
+console.log(car == "subaru");
+
+let animal_name = "camel";
+console.log("Is animal name == 'camel'? true ");
+console.log(animal_name == "camel");
+
+//Question 24
+
+//Question 25
+
+let alien_color = "Green";
+
+if (alien_color == "Green" || alien_color == "green") {
+  console.log("The player earned 5 points!");
+}
+
+alien_color = "Yellow";
+if (alien_color == "Green" || alien_color == "green") {
+  console.log("The player earned 5 points!");
+} else {
+}
+
+//Question 26
+
+alien_color = "green";
+
+if (alien_color == "Green" || alien_color == "green") {
+  console.log("The player earned 5 points for shooting the alien!");
+} else {
+  console.log("The player just earned 10 points!");
+}
+
+alien_color = "yellow";
+
+if (alien_color == "Green" || alien_color == "green") {
+  console.log("The player earned 5 points for shooting the alien!");
+} else {
+  console.log("The player just earned 10 points!");
+}
+
+//Question 27
+
+alien_color = "green";
+if (alien_color == "Green" || alien_color == "green") {
+  console.log("The player earned 5 points!");
+} else if (alien_color == "Yellow" || alien_color == "yellow") {
+  console.log("The player just earned 10 points!");
+} else if (alien_color == "Red" || alien_color == "red") {
+  console.log("The player just earned 15 points!");
+}
+
+alien_color = "yellow";
+
+if (alien_color == "Green" || alien_color == "green") {
+  console.log("The player earned 5 points!");
+} else if (alien_color == "Yellow" || alien_color == "yellow") {
+  console.log("The player just earned 10 points!");
+} else if (alien_color == "Red" || alien_color == "red") {
+  console.log("The player just earned 15 points!");
+}
+
+alien_color = "Red";
+
+if (alien_color == "Green" || alien_color == "green") {
+  console.log("The player earned 5 points!");
+} else if (alien_color == "Yellow" || alien_color == "yellow") {
+  console.log("The player just earned 10 points!");
+} else if (alien_color == "Red" || alien_color == "red") {
+  console.log("The player just earned 15 points!");
+}
+
+//Question 28
+
+let age = 2;
+
+if (age < 2) {
+  console.log("The person is a baby");
+} else if (age >= 2 && age < 4) {
+  console.log("The person is a toddler");
+} else if (age >= 4 && age < 13) {
+  console.log("The person is a kid");
+} else if (age >= 13 && age < 20) {
+  console.log("The person is a teenager");
+} else if (age >= 20 && age < 65) {
+  console.log("The person is a adult");
+} else if (age >= 65) {
+  console.log("The person is a elder");
+}
+
+//Question 29
+
+const favourite_fruits = ["Cherry", "Mango", "Grapes"];
+
+for (let i = 0; i < 5; i++) {
+  if (favourite_fruits[i] == "Banana") {
+    console.log(`You really like Banana`);
+  } else if (favourite_fruits[i] == "Cherry") {
+    console.log("You really like cherry");
+  } else if (favourite_fruits[i] == "Apple") {
+    console.log("You really Like Apple");
+  } else if (favourite_fruits[i] == "Grapes") {
+    console.log("You really like Grapes");
+  } else if (favourite_fruits[i] == "Mango") {
+    console.log("You really like mangoes");
+  }
+}
+
+//Question 30
+
+const usernames = [
+  "admin",
+  "haris-eng7",
+  "imran786",
+  "noman3557",
+  "shopifydev7",
+];
+
+for (let name of usernames) {
+  if (name == "admin") {
+    console.log("Hello admin, would you like to see a status report?");
+  } else {
+    console.log(`Hello ${name}, thank you for logging in again.`);
+  }
+}
+
+//Question 31
+
+if (usernames.length > 0) {
+} else {
+  console.log("We need to find some users");
+}
+
+usernames.shift();
+usernames.shift();
+usernames.shift();
+usernames.shift();
+usernames.shift();
+
+console.log(usernames);
+
+if (usernames.length > 0) {
+} else {
+  console.log("We need to find some users");
+}
+
+//Question 32
+
+const current_users = [
+  "admin",
+  "hariseng7",
+  "imran786",
+  "noman3557",
+  "shopifydev7",
+  "eng7",
+];
+
+const new_users = ["ashir123", "ahmadali", "admin", "hariseng7", "imran123"];
+
+for (let i = 0; i < new_users.length; i++) {
+  for (let j = 0; j < current_users.length; j++) {
+    if (new_users[i] == current_users[j]) {
+      console.log("Username already used! please add a new username");
+      break;
+    } else {
+      console.log("Username is Available to use");
+      break;
+    }
+  }
+}
+
+//Question 33
+
+const ordinal_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let num = 1; num <= ordinal_nums.length; num++) {
+  if (num == 1) {
+    console.log("1st");
+  } else if (num == 2) {
+    console.log("2nd");
+  } else if (num == 3) {
+    console.log("3rd");
+  } else {
+    console.log(`${num}th`);
+  }
+}
+
+//Question 34
+
+const fav_pizzas = ["Crown Crust", "Chicken Tikka", "Creamy Melt"];
+
+for (let pizza in fav_pizzas) {
+  console.log(fav_pizzas[pizza]);
+}
+
+console.log(
+  "I like pizza very much. I am in love with Crown crust pizza from Cheezious but the Creamy Melt from Pizza Hut is good too!"
+);
+
+//Question 35
