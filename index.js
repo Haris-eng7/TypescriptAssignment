@@ -1,3 +1,12 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var person_name = "Haris Naeem";
 //Question 2
 console.log("Hello ".concat(person_name, ", would you like to learn some Typescript today?"));
@@ -57,7 +66,7 @@ for (var i = 0; i < ownArr.length; i++) {
         console.log("i love travelling to big cities in ".concat(ownArr[i], " "));
     }
 }
-//Question 14
+//Question 14 - 15
 var guests = ["Noman", "Imran", "Ashir"];
 for (var i = 0; i < guests.length; i++) {
     if (guests[i] == "Noman") {
@@ -70,3 +79,54 @@ for (var i = 0; i < guests.length; i++) {
         console.log("Good evening ".concat(guests[i], ". Are you available tomorrow for a dinner? "));
     }
 }
+for (var i = 0; i < guests.length; i++) {
+    if (guests[i] == "Ashir") {
+        console.log("".concat(guests[i], " is not available for dinner tomorrow."));
+    }
+}
+for (var i = 0; i < guests.length; i++) {
+    if (guests[i] == "Ashir") {
+        guests.splice(i, 1, "Zain");
+    }
+}
+console.log(guests);
+for (var i = 0; i < guests.length; i++) {
+    console.log("Thanks ".concat(guests[i], " for confirming of your availability!"));
+}
+//Question 16
+console.log("I have found a big dinner table!");
+guests.unshift("Ahmad");
+guests.splice(Math.floor(guests.length / 2), 0, "Awais");
+guests.push("Hamza");
+console.log(guests);
+//Question 17
+console.log("For some Reasons, the dinner table is not available for the scheduled time. I have space for two guest only.");
+console.log(guests.length);
+console.log("Sorry ".concat(guests[guests.length - 1], ", i cannot invite you on dinner."));
+guests.pop();
+console.log("Sorry ".concat(guests[guests.length - 1], ", i cannot invite you on dinner."));
+guests.pop();
+console.log("Sorry ".concat(guests[guests.length - 1], ", i cannot invite you on dinner."));
+guests.pop();
+console.log("Sorry ".concat(guests[guests.length - 1], ", i cannot invite you on dinner."));
+guests.pop();
+for (var name_1 in guests) {
+    console.log("Hey ".concat(guests[name_1], ", you are still invited on the dinner"));
+}
+guests.pop();
+guests.pop();
+console.log(guests);
+//Question 18
+var locations = ["Switzerland", "America", "Austria", "France", "Spain"];
+console.log(locations);
+var alphabetical_order = __spreadArray([], locations, true);
+alphabetical_order.sort();
+console.log(alphabetical_order);
+console.log(locations);
+alphabetical_order.reverse();
+console.log(alphabetical_order);
+console.log(alphabetical_order.reverse());
+console.log(locations.sort());
+console.log(locations.reverse());
+//Question 19
+console.log("I am now inviting ".concat(guests.length, " on dinner tomorrow"));

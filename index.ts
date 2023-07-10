@@ -87,7 +87,7 @@ for (let i = 0; i < ownArr.length; i++) {
   }
 }
 
-//Question 14
+//Question 14 - 15
 
 const guests = ["Noman", "Imran", "Ashir"];
 for (let i = 0; i < guests.length; i++) {
@@ -111,3 +111,85 @@ for (let i = 0; i < guests.length; i++) {
     console.log(`${guests[i]} is not available for dinner tomorrow.`);
   }
 }
+
+for (let i = 0; i < guests.length; i++) {
+  if (guests[i] == "Ashir") {
+    guests.splice(i, 1, "Zain");
+  }
+}
+
+console.log(guests);
+
+for (let i = 0; i < guests.length; i++) {
+  console.log(`Thanks ${guests[i]} for confirming of your availability!`);
+}
+
+//Question 16
+
+console.log("I have found a big dinner table!");
+
+guests.unshift("Ahmad");
+guests.splice(Math.floor(guests.length / 2), 0, "Awais");
+guests.push("Hamza");
+console.log(guests);
+
+//Question 17
+
+console.log(
+  "For some Reasons, the dinner table is not available for the scheduled time. I have space for two guest only."
+);
+
+console.log(guests.length);
+
+console.log(
+  `Sorry ${guests[guests.length - 1]}, i cannot invite you on dinner.`
+);
+guests.pop();
+
+console.log(
+  `Sorry ${guests[guests.length - 1]}, i cannot invite you on dinner.`
+);
+guests.pop();
+console.log(
+  `Sorry ${guests[guests.length - 1]}, i cannot invite you on dinner.`
+);
+guests.pop();
+console.log(
+  `Sorry ${guests[guests.length - 1]}, i cannot invite you on dinner.`
+);
+guests.pop();
+
+for (let name in guests) {
+  console.log(`Hey ${guests[name]}, you are still invited on the dinner`);
+}
+
+guests.pop();
+guests.pop();
+
+console.log(guests);
+
+//Question 18
+
+const locations = ["Switzerland", "America", "Austria", "France", "Spain"];
+
+console.log(locations);
+
+const alphabetical_order = [...locations];
+
+alphabetical_order.sort();
+console.log(alphabetical_order);
+console.log(locations);
+
+alphabetical_order.reverse();
+
+console.log(alphabetical_order);
+
+console.log(alphabetical_order.reverse());
+
+console.log(locations.sort());
+
+console.log(locations.reverse());
+
+//Question 19
+
+console.log(`I am now inviting ${guests.length} people on dinner tomorrow`);
