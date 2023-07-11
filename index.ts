@@ -372,44 +372,41 @@ const current_users = [
 
 const new_users = ["ashir123", "ahmadali", "admin", "hariseng7", "imran123"];
 
-for (let i = 0; i < new_users.length; i++) {
-  for (let j = 0; j < current_users.length; j++) {
-    if (new_users[i] == current_users[j]) {
-      console.log("Username already used! please add a new username");
-      break;
-    } else {
-      console.log("Username is Available to use");
-      break;
-    }
-  }
-}
-
-//Question 33
-
-const ordinal_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-for (let num = 1; num <= ordinal_nums.length; num++) {
-  if (num == 1) {
-    console.log("1st");
-  } else if (num == 2) {
-    console.log("2nd");
-  } else if (num == 3) {
-    console.log("3rd");
+new_users.forEach((user: string) => {
+  console.log(user);
+  if (current_users.includes(user)) {
+    console.log("User found");
   } else {
-    console.log(`${num}th`);
+    console.log("USer not found");
   }
-}
+});
 
-//Question 34
+// //Question 33
 
-const fav_pizzas = ["Crown Crust", "Chicken Tikka", "Creamy Melt"];
+// const ordinal_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for (let pizza in fav_pizzas) {
-  console.log(fav_pizzas[pizza]);
-}
+// for (let num = 1; num <= ordinal_nums.length; num++) {
+//   if (num == 1) {
+//     console.log("1st");
+//   } else if (num == 2) {
+//     console.log("2nd");
+//   } else if (num == 3) {
+//     console.log("3rd");
+//   } else {
+//     console.log(`${num}th`);
+//   }
+// }
 
-console.log(
-  "I like pizza very much. I am in love with Crown crust pizza from Cheezious but the Creamy Melt from Pizza Hut is good too!"
-);
+// //Question 34
 
-//Question 35
+// const fav_pizzas = ["Crown Crust", "Chicken Tikka", "Creamy Melt"];
+
+// for (let pizza in fav_pizzas) {
+//   console.log(fav_pizzas[pizza]);
+// }
+
+// console.log(
+//   "I like pizza very much. I am in love with Crown crust pizza from Cheezious but the Creamy Melt from Pizza Hut is good too!"
+// );
+
+// //Question 35
