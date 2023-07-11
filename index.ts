@@ -1,6 +1,5 @@
-var person_name = "Haris Naeem";
-
 //Question 2
+var person_name = "Haris Naeem";
 console.log(
   `Hello ${person_name}, would you like to learn some Typescript today?`
 );
@@ -37,8 +36,16 @@ console.log(`${famous_person} once said, ${message}`);
 
 //Question 6
 
-const Name = "\t Haris Naeem \t";
+let Name = "\t Haris Naeem \t";
 
+console.log(Name);
+
+Name = "\t Haris \nNaeem";
+
+console.log(Name);
+
+Name = Name.trim();
+Name = Name.replace("\n", "");
 console.log(Name);
 
 //Question 7 & 8
@@ -212,13 +219,47 @@ console.log(details.rivers);
 
 //Question 23
 
-let car = "subaru";
+//True tests
+const car: string = "subaru";
 console.log("Is car == 'subaru'? I predict True.");
-console.log(car == "subaru");
+console.log(car == "subaru" ? true : false);
 
-let animal_name = "camel";
+const animal_name: string = "camel";
 console.log("Is animal name == 'camel'? true ");
-console.log(animal_name == "camel");
+console.log(animal_name == "camel" ? true : false);
+
+const bird: string = "sparrow";
+console.log("Is bird == 'sparrow'? I predict True.");
+console.log(bird == "sparrow");
+
+const truck: string = "ford";
+console.log("Is truck == 'ford'? I predict True.");
+console.log(truck == "ford" ? true : false);
+
+const bus: string = "metro";
+console.log("Is bus == 'metro'? I predict True.");
+console.log(bus == "metro" ? true : false);
+
+//False Tests
+const country: string = "Pakistan";
+console.log("Is Pakistan == 'Canada'? I predict True.");
+console.log(country === "Canada" ? true : false);
+
+const city: string = "Karachi";
+console.log("Is City name == 'Lahore'? I predict true. ");
+console.log(city == "Lahore" ? true : false);
+
+const Fav_food: string = "Biryani";
+console.log("Is Favourite food == 'Pulao'? I predict True.");
+console.log(Fav_food == "Pulao" ? true : false);
+
+const river: string = "Indus";
+console.log("Is river == 'jhelum'? I predict True.");
+console.log(river == "jhelum" ? true : false);
+
+const fav_sport = "cricket";
+console.log("Is favourite sport == 'Football'? I predict True.");
+console.log(bus == "football" ? true : false);
 
 //Question 24
 
@@ -372,44 +413,43 @@ const current_users = [
 
 const new_users = ["ashir123", "ahmadali", "admin", "hariseng7", "imran123"];
 
-// new_users.forEach((user: string) => {
-//   console.log(user);
-//   if (current_users.includes(user)) {
-//     console.log("User found");
-//   } else {
-//     console.log("USer not found");
-//   }
-// });
+new_users.forEach((user: string) => {
+  if (current_users.includes(user)) {
+    console.log("Username already exist. please try a new one");
+  } else {
+    console.log("Username available to use!");
+  }
+});
 
-// //Question 33
+//Question 33
 
-// const ordinal_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const ordinal_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// for (let num = 1; num <= ordinal_nums.length; num++) {
-//   if (num == 1) {
-//     console.log("1st");
-//   } else if (num == 2) {
-//     console.log("2nd");
-//   } else if (num == 3) {
-//     console.log("3rd");
-//   } else {
-//     console.log(`${num}th`);
-//   }
-// }
+for (let num = 1; num <= ordinal_nums.length; num++) {
+  if (num == 1) {
+    console.log("1st");
+  } else if (num == 2) {
+    console.log("2nd");
+  } else if (num == 3) {
+    console.log("3rd");
+  } else {
+    console.log(`${num}th`);
+  }
+}
 
-// //Question 34
+//Question 34
 
-// const fav_pizzas = ["Crown Crust", "Chicken Tikka", "Creamy Melt"];
+const fav_pizzas = ["Crown Crust", "Chicken Tikka", "Creamy Melt"];
 
-// for (let pizza in fav_pizzas) {
-//   console.log(fav_pizzas[pizza]);
-// }
+for (let pizza in fav_pizzas) {
+  console.log(fav_pizzas[pizza]);
+}
 
-// console.log(
-//   "I like pizza very much. I am in love with Crown crust pizza from Cheezious but the Creamy Melt from Pizza Hut is good too!"
-// );
+console.log(
+  "I like pizza very much. I am in love with Crown crust pizza from Cheezious but the Creamy Melt from Pizza Hut is good too!"
+);
 
-// //Question 35
+//Question 35
 
 const animals = ["Dog", "Cat", "Horse"];
 
@@ -419,6 +459,144 @@ animals.forEach((animal) => {
 
 animals.forEach((animal) => {
   if (animal == "Dog") {
-    console.log(animal);
+    console.log(`${animal} is a great pet!`);
+  } else if (animal == "Cat") {
+    console.log(`${animal} is a great pet!`);
+  } else if (animal == "Horse") {
+    console.log(`${animal} is a great animal!`);
   }
 });
+
+console.log("All of these animals are good for keeping im home");
+
+//Question 36
+
+function make_shirt(size: string, text: string) {
+  console.log(`Size of shirt is ${size} and text to be printed is ${text}`);
+}
+
+make_shirt("Small", "Adidas");
+
+//Question 37
+
+function make_shirt_large(
+  size: string = "Large",
+  text: string = "I love typescript"
+) {
+  console.log(`Size of shirt is ${size} and text to be printed is ${text}`);
+}
+
+make_shirt_large();
+
+function make_shirt_medium(
+  size: string = "medium",
+  text: string = "I love React.js"
+) {
+  console.log(`Size of shirt is ${size} and text to be printed is ${text}`);
+}
+
+make_shirt_medium();
+
+function make_shirt_small(
+  size: string = "Small",
+  text: string = "I love Javascript"
+) {
+  console.log(`Size of shirt is ${size} and text to be printed is ${text}`);
+}
+
+make_shirt_small();
+
+//Question 38
+
+function describe_city(city: string, country: string = "Pakistan") {
+  console.log(`${city} is in ${country}`);
+}
+
+describe_city("Karachi");
+describe_city("Lahore");
+describe_city("Paris", "France");
+
+//Question 39
+
+function city_country(city: string, country: string) {
+  console.log(`${city}, ${country}`);
+}
+
+city_country("Islamabad", "Pakistan");
+city_country("Calgary", "Canada");
+city_country("London", "Uk");
+
+//Question 40
+function make_album(artist: string, title: string, tracks: number = 0) {
+  if (tracks > 0) {
+    return {
+      artist: artist,
+      title: title,
+      tracks: tracks,
+    };
+  } else {
+    return {
+      artist: artist,
+      title: title,
+    };
+  }
+}
+
+console.log(make_album("Nusrat", "Qawali's"));
+console.log(make_album("Atif Aslam", "Songs"));
+console.log(make_album("Rahat Fateh", "Songs"));
+console.log(make_album("Arijit Singh", "Songs", 20));
+
+//Question 41
+
+const magicians = ["Harry", "David", "Pen", "Lance", "Derren"];
+
+function show_magicians() {
+  magicians.forEach((magician) => {
+    console.log(magician);
+  });
+}
+
+show_magicians();
+
+function make_great() {
+  magicians.forEach((magician, index) => {
+    magicians[index] = magician + " is Great!";
+  });
+}
+make_great();
+show_magicians();
+
+//Question 43
+
+const new_magicians = [...magicians];
+
+//Question 44
+
+function getSandwiches(sandwich: string[]) {
+  sandwich.forEach((sandi) => {
+    console.log(sandi);
+  });
+}
+
+getSandwiches(["ketchup", "Cheese", "Butter"]);
+
+getSandwiches(["Chicken", "Butter"]);
+
+getSandwiches(["ketchup", "Cheese", "Butter", "Salad"]);
+
+//Question 45
+function getCars(model: string, manufacturer: string, ...options: string[]) {
+  const car = {
+    Model: model,
+    Manufacturer: manufacturer,
+    Options: options,
+  };
+  return car;
+}
+
+console.log(getCars("Civic", "Honda"));
+
+console.log(getCars("Model-x", "Tesla", "Black"));
+
+console.log(getCars("Altis", "Toyota", "White", "2022"));
