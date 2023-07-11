@@ -372,14 +372,14 @@ const current_users = [
 
 const new_users = ["ashir123", "ahmadali", "admin", "hariseng7", "imran123"];
 
-new_users.forEach((user: string) => {
-  console.log(user);
-  if (current_users.includes(user)) {
-    console.log("User found");
-  } else {
-    console.log("USer not found");
-  }
-});
+// new_users.forEach((user: string) => {
+//   console.log(user);
+//   if (current_users.includes(user)) {
+//     console.log("User found");
+//   } else {
+//     console.log("USer not found");
+//   }
+// });
 
 // //Question 33
 
@@ -410,3 +410,15 @@ new_users.forEach((user: string) => {
 // );
 
 // //Question 35
+
+const animals = ["Dog", "Cat", "Horse"];
+
+animals.forEach((animal) => {
+  console.log(animal);
+});
+
+animals.forEach((animal) => {
+  if (animal == "Dog") {
+    console.log(animal);
+  }
+});

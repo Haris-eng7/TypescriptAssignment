@@ -290,15 +290,14 @@ var current_users = [
     "eng7",
 ];
 var new_users = ["ashir123", "ahmadali", "admin", "hariseng7", "imran123"];
-new_users.forEach(function (user) {
-    console.log(user);
-    if (current_users.includes(user)) {
-        console.log("User found");
-    }
-    else {
-        console.log("USer not found");
-    }
-});
+// new_users.forEach((user: string) => {
+//   console.log(user);
+//   if (current_users.includes(user)) {
+//     console.log("User found");
+//   } else {
+//     console.log("USer not found");
+//   }
+// });
 // //Question 33
 // const ordinal_nums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 // for (let num = 1; num <= ordinal_nums.length; num++) {
