@@ -222,23 +222,23 @@ console.log(details.rivers);
 //True tests
 const car: string = "subaru";
 console.log("Is car == 'subaru'? I predict True.");
-console.log(car == "subaru" ? true : false);
+console.log(car === "subaru" ? true : false);
 
 const animal_name: string = "camel";
 console.log("Is animal name == 'camel'? true ");
-console.log(animal_name == "camel" ? true : false);
+console.log(animal_name === "camel" ? true : false);
 
 const bird: string = "sparrow";
 console.log("Is bird == 'sparrow'? I predict True.");
-console.log(bird == "sparrow");
+console.log(bird === "sparrow");
 
 const truck: string = "ford";
 console.log("Is truck == 'ford'? I predict True.");
-console.log(truck == "ford" ? true : false);
+console.log(truck === "ford" ? true : false);
 
 const bus: string = "metro";
 console.log("Is bus == 'metro'? I predict True.");
-console.log(bus == "metro" ? true : false);
+console.log(bus === "metro" ? true : false);
 
 //False Tests
 const country: string = "Pakistan";
@@ -247,22 +247,63 @@ console.log(country === "Canada" ? true : false);
 
 const city: string = "Karachi";
 console.log("Is City name == 'Lahore'? I predict true. ");
-console.log(city == "Lahore" ? true : false);
+console.log(city === "Lahore" ? true : false);
 
 const Fav_food: string = "Biryani";
 console.log("Is Favourite food == 'Pulao'? I predict True.");
-console.log(Fav_food == "Pulao" ? true : false);
+console.log(Fav_food === "Pulao" ? true : false);
 
 const river: string = "Indus";
 console.log("Is river == 'jhelum'? I predict True.");
-console.log(river == "jhelum" ? true : false);
+console.log(river === "jhelum" ? true : false);
 
 const fav_sport = "cricket";
 console.log("Is favourite sport == 'Football'? I predict True.");
-console.log(bus == "football" ? true : false);
+console.log(bus === "football" ? true : false);
 
 //Question 24
 
+//Tests for equality and inequality with strings
+const designation: string = "Manager";
+console.log(designation === "manager" ? true : false);
+
+//Tests using the lower case function
+console.log(designation.toLowerCase() == "manager" ? true : false);
+
+//Numerical tests involving equality and inequality, greater than and less than, greater than or equal to, and less than or equal to
+const salary: number = 25000;
+console.log(salary < 10000 ? true : false);
+console.log(salary > 3000 ? true : false);
+console.log(salary === 25000 ? true : false);
+console.log(salary === 15000 ? true : false);
+
+// Tests using "and" and "or" operators
+console.log(salary > 10000 && salary < 20000 ? true : false);
+console.log(salary > 20000 || salary < 30000 ? true : false);
+
+//Test whether an item is in a array
+const exams = ["DSA", "OOP", "PF", "Calculus"];
+exams.forEach((exam, index) => {
+  if (exam === "OOP") {
+    console.log(`${exam} found at index ${index}`);
+  }
+});
+
+//Test whether an item is not in a array
+let examFound: boolean = true;
+exams.forEach((exam, index) => {
+  if (exam === "Stats") {
+    examFound = true;
+  } else {
+    examFound = false;
+  }
+});
+
+if (examFound) {
+  console.log("Stats found in exams!");
+} else {
+  console.log("Stats not found in exams!");
+}
 //Question 25
 
 let alien_color = "Green";
